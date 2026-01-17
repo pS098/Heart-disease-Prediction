@@ -1,1 +1,56 @@
-Heart Disease Prediction & AnalysisThis project implements a machine learning pipeline to predict heart disease using a clinical dataset. It covers the entire data science lifecycle, from Exploratory Data Analysis (EDA) and Feature Engineering to Hyperparameter Tuning and Neural Network implementation.🚀 Project OverviewThe primary goal is to classify patients as having heart disease or not based on medical features like Age, Blood Pressure, Cholesterol, and Heart Rate. The project explores multiple classical machine learning models and a Deep Learning approach to find the most accurate predictor.📊 Dataset FeaturesThe model utilizes several key features for prediction:Demographics: Age, Gender.Vital Signs: Blood Pressure, Heart Rate.Labs: Cholesterol levels.Derived Features: * AgeBucket: Categorical grouping of ages.Chol_per_Age: Ratio of cholesterol to age.HR_pct_max: Heart rate relative to the theoretical maximum ($220 - Age$).🛠️ Technical Workflow1. Exploratory Data Analysis (EDA)Distributions: Visualized feature spreads using histograms.Correlations: Generated a heatmap to identify relationships between variables.Dimensionality Reduction: Applied Principal Component Analysis (PCA) to visualize the 2D separability of the classes and analyze explained variance.2. Model ImplementationThe project compares several industry-standard algorithms:Linear Models: Logistic Regression.Tree-Based: Decision Trees, Random Forest, Gradient Boosting.Distance/Probabilistic: K-Nearest Neighbors (KNN), Naive Bayes, Support Vector Machines (SVM).Deep Learning: A multi-layer Sequential Neural Network built with TensorFlow/Keras.3. Optimization & EvaluationPreprocessing: Pipelines include StandardScaler for numerical data and OneHotEncoder for categorical variables.Tuning: Automated hyperparameter optimization using GridSearchCV and RandomizedSearchCV.Metrics: Models are evaluated using Accuracy, Precision, Recall, F1-Score, and ROC-AUC curves.Validation: 5-fold Cross-Validation to ensure model robustness and prevent overfitting.📈 Key ResultsThe project includes a visual comparison of all models' accuracies using bar plots.ROC Curves are plotted for all supporting models to compare their True Positive vs. False Positive rates.💻 RequirementsTo run this notebook, you need the following libraries:Bashpip install pandas numpy matplotlib seaborn scikit-learn tensorflow
+# Heart Disease Prediction & Machine Learning Benchmark
+
+This project explores various Machine Learning and Deep Learning techniques to predict heart disease based on clinical patient data. It includes a comprehensive pipeline from data preprocessing and feature engineering to hyperparameter optimization and model evaluation.
+
+## 🚀 Project Overview
+The goal of this project is to develop a robust classifier that identifies whether a patient has heart disease based on medical attributes. The project compares classical ML models against a deep learning approach to determine the most effective predictive method.
+
+## 📊 Dataset Features
+The dataset includes several clinical indicators used as input features:
+* **Demographics:** Age, Gender.
+* **Vitals:** Blood Pressure, Heart Rate.
+* **Laboratory Results:** Cholesterol levels.
+* **Engineered Features:**
+    * `AgeBucket`: Categorical grouping of age ranges.
+    * `Chol_per_Age`: Ratio of cholesterol to age.
+    * `HR_pct_max`: Heart rate relative to the theoretical maximum ($220 - Age$).
+
+## 🛠️ Technical Workflow
+
+### 1. Data Analysis & Visualization
+* **Exploratory Data Analysis (EDA):** Visualized feature distributions and correlations using Seaborn heatmaps.
+* **Dimensionality Reduction:** Utilized **Principal Component Analysis (PCA)** to visualize class separation in 2D and analyze explained variance.
+
+
+
+### 2. Model Implementation
+I implemented and compared several industry-standard algorithms:
+* **Linear Models:** Logistic Regression (with L1/L2 regularization).
+* **Tree-Based Models:** Decision Tree, Random Forest, and Gradient Boosting Classifiers.
+* **Distance/Probabilistic:** K-Nearest Neighbors (KNN) and Naive Bayes.
+* **Deep Learning:** A multi-layer **Sequential Neural Network** built with TensorFlow/Keras using ReLU and Sigmoid activation functions.
+
+### 3. Optimization & Evaluation
+* **Preprocessing:** Data was scaled using `StandardScaler` and categorical variables were handled via `OneHotEncoder`.
+* **Hyperparameter Tuning:** Automated search using `GridSearchCV` and `RandomizedSearchCV` to find optimal model parameters.
+* **Validation:** Conducted **5-fold Cross-Validation** to ensure the models generalize well to unseen data.
+* **Metrics:** Evaluation focused on Accuracy, F1-Score, and **ROC-AUC curves**.
+
+
+
+## 📈 Key Results
+The project provides a comparative analysis of all models, highlighting:
+* Model accuracy comparisons via bar plots.
+* Confusion matrices to analyze False Positives and False Negatives.
+* ROC-AUC analysis to measure the trade-off between sensitivity and specificity.
+
+## 💻 Requirements
+To run this project, you will need:
+* Python 3.10+
+* Pandas & NumPy
+* Matplotlib & Seaborn
+* Scikit-Learn
+* TensorFlow
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn tensorflow
